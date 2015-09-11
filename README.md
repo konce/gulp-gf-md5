@@ -1,19 +1,19 @@
-# gulp-md5-plus
+# gulp-gf-md5
 
-> md5 plugin for [gulp](https://github.com/wpfpizicai/gulp-md5-plus) ,md5 the static files(eg javascript style image files) ;then replace the filenames in css or the html if needed by passing the file or dir in the second parameter
+> md5 plugin for [gulp](https://github.com/gf-web/gulp-gf-md5) ,md5 the static files(eg javascript style image files) ;then replace the filenames in css or the html if needed by passing the file or dir in the second parameter
 
 ## Usage
 
-First, install `gulp-md5-plus` as a development dependency:
+First, install `gulp-gf-md5` as a development dependency:
 
 ```shell
-npm install --save-dev gulp-md5-plus
+npm install --save-dev gulp-gf-md5
 ```
 
 Then, add it to your `gulpfile.js`:
 
 ```javascript
-var md5 = require("gulp-md5-plus");
+var md5 = require("gulp-gf-md5");
 
 gulp.src("./src/*.css")
 	.pipe(md5(10,'./output/index.html'))
@@ -66,7 +66,8 @@ Example:
 
 The sample above will append the md5 hash(length : 10) to each of the file in the static/js folder then repalce the link file name in the output/html/ using md5ed file name; at last store all of that into the *output* folder.
 
-
+## notice
+This is fork gulp-md5-plus, modify 'new RegExp(filename)' to '/new RegExp(filename)/g'
 
 ## License
 
